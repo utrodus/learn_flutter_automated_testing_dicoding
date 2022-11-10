@@ -29,7 +29,15 @@ void main() {
       await tester.scrollUntilVisible(listFinder, 5000);
       expect(firstItem, findsOneWidget);
 
-      // record the performance of the app
+      /// We can combine the process of testing and recording application performance
+      /// with the binding.traceAction() function.
+      /// record the performance of the app
+      /// To save the performance capture, create a test_driver folder in the main directory.
+      /// The code below will capture performance in a Map format variable.
+      await binding.traceAction(() async {
+        await tester.scrollUntilVisible(listFinder, 500);
+        expect(firstItem, findsOneWidget);
+      });
     });
   });
 }
