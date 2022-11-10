@@ -58,6 +58,8 @@ class ModuleTile extends StatelessWidget {
       trailing: isDone
           ? const Icon(Icons.done)
           : ElevatedButton(
+              /// Integration Test uses key as component identifier.
+              /// For that, we should also add a key to the component we want to test
               key: Key(moduleName),
               onPressed: onClick,
               child: const Text('Done'),
