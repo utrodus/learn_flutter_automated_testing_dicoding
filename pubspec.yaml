@@ -18,6 +18,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # Integration Test Required Package  
+  integration_test:
+    sdk: flutter
+  # Package for test performance of the app
+  flutter_driver:
+    sdk: flutter  
 
   flutter_lints: ^2.0.0
 
